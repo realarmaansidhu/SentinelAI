@@ -26,13 +26,13 @@ We combine **zxcvbn** (Dropbox's entropy estimator) with a **Large Language Mode
 
 ```mermaid
 graph TD
-    A[Request Password/Audit] --> B{Gemini 2.0 Flash}
-    B -->|Success| C[Return Result]
-    B -->|Fail| D{Llama 3 (Groq)}
+    A["Request Password/Audit"] --> B{"Gemini 2.0 Flash"}
+    B -->|Success| C["Return Result"]
+    B -->|Fail| D{"Llama 3 (Groq)"}
     D -->|Success| C
-    D -->|Fail| E{Mistral Tiny}
+    D -->|Fail| E{"Mistral Tiny"}
     E -->|Success| C
-    E -->|Fail| F[Error Handling]
+    E -->|Fail| F["Error Handling"]
 ```
 
 ### 4. 🛡️ Enterprise-Grade Security
@@ -58,21 +58,17 @@ We are building the ultimate AI Security Suite. Coming soon:
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: [Streamlit](https://streamlit.io/) with custom CSS for a "Cyber Security" aesthetic.
-- **Orchestration**: [LangChain](https://www.langchain.com/).
-- **AI Models**:
-    - **Primary**: Google Gemini 2.0 Flash (`langchain-google-genai`)
-    - **Secondary**: Llama 3 on Groq (`langchain-groq`)
-    - **Tertiary**: Mistral AI (`langchain-mistralai`)
-- **Security Logic**: `zxcvbn` (Python port).
+- **Frontend**: Streamlit (Custom Cyberpunk Theme)
+- **AI Core**: LangChain + Google Gemini / Groq / Mistral
+- **Security**: zxcvbn + Custom Heuristics
 
 ---
 
 ## 📦 Installation
 
 ## How to Run
-1.  **Clone**: `git clone https://github.com/realarmaansidhu/SentinelAI.git`
-2.  **Navigate**: `cd SentinelAI`
+1.  **Clone**: `git clone https://github.com/realarmaansidhu/SentinelXC.git`
+2.  **Navigate**: `cd SentinelXC`
 3.  **Install**: `pip install -r requirements.txt`
 4.  **Run**: `streamlit run app.py`
 
@@ -93,9 +89,8 @@ We are building the ultimate AI Security Suite. Coming soon:
 
 ## 📸 Screenshots
 
-| Architect Mode | Red Team Mode |
-|:---:|:---:|
-| Generate themed passwords | Get roasted by AI |
+![SentinelXC Security Dashboard](media/demo.webp)
+
 
 ---
 
